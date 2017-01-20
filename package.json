@@ -4,7 +4,11 @@
   "description": "Learning GraphQL and Relay",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "NODE_ENV=production node server.js",
+    "start-win": "SET NODE_ENV=production&& node server.js",
+    "generate-schema": "node generateSchemaCache.js",
+    "bundle": "NODE_ENV=production webpack -p --config webpack.config.prod.js",
+    "bundle-win": "SET NODE_ENV=production&& webpack -p --config webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
